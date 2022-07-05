@@ -1,0 +1,3156 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GridDB – API Reference</title>
+    <link>https://gahoh.github.io/docsy-example/docs/30_reference_api/</link>
+    <description>Recent content in API Reference on GridDB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://gahoh.github.io/docsy-example/docs/30_reference_api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Java API Reference</title>
+      <link>https://gahoh.github.io/docsy-example/docs/30_reference_api/12.md_reference_java_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gahoh.github.io/docsy-example/docs/30_reference_api/12.md_reference_java_api/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This document describes the Java API specifications and other information for developing user application programs using Java with GridDB&amp;rsquo;s NoSQL interface.
+This Java API reference is common to both GridDB Community Edition and GridDB Enterprise Edition.&lt;br&gt;&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;warning&lt;/h4&gt;
+
+    In GridDB Community Edition, table partitioned tables (containers) cannot be manipulated.
+
+&lt;/div&gt;
+
+&lt;h5&gt;&lt;a href=&#34;./md_reference_java_api.html&#34;&gt;Java API Reference&lt;/a&gt;&lt;/h5&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: C API Reference</title>
+      <link>https://gahoh.github.io/docsy-example/docs/30_reference_api/13.md_reference_c_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gahoh.github.io/docsy-example/docs/30_reference_api/13.md_reference_c_api/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This document describes the specifications of the C API for developing user application programs using the C language with GridDB&amp;rsquo;s NoSQL interface. &lt;br&gt;
+This C API reference is common to both GridDB Community Edition and GridDB Enterprise Edition.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;warning&lt;/h4&gt;
+
+    C API &lt;b&gt;spatial data &lt;/b&gt;is &lt;b&gt;not supported&lt;/b&gt; in the current version of GridDB Community Edition. Use Java API.
+
+&lt;/div&gt;
+
+&lt;h5&gt;&lt;a href=&#34;./md_reference_c_api.html&#34;&gt;C API Reference&lt;/a&gt;&lt;/h5&gt;
+~                                                         
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Web API Reference</title>
+      <link>https://gahoh.github.io/docsy-example/docs/30_reference_api/18.md_reference_web_api/md_reference_web_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gahoh.github.io/docsy-example/docs/30_reference_api/18.md_reference_web_api/md_reference_web_api/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;----web-api----&#34;&gt;&amp;mdash; Web API &amp;mdash;&lt;/h2&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;GridDB provides a Web API to register rows, acquire rows and execute TQL and SQL statements for the GridDB cluster.  The Web API is configured as a web application.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&#34;img/webapi-overview.png&#34; alt=&#34;Web API&#34; width=&#34;650&#34;/&gt;
+  &lt;figcaption&gt;Web API&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The functions of GridDB Web API are shown below.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Row acquisition
+&lt;ul&gt;
+&lt;li&gt;Acquires rows from a container.&lt;/li&gt;
+&lt;li&gt;Acquires rows from multiple containers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Row registration
+&lt;ul&gt;
+&lt;li&gt;Registers rows in a container.&lt;/li&gt;
+&lt;li&gt;Registers rows in multiple containers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Database connection confirmation
+&lt;ul&gt;
+&lt;li&gt;Checks connection to a database.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Container list acquisition
+&lt;ul&gt;
+&lt;li&gt;Acquires a container list from a database.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Container information acquisition
+&lt;ul&gt;
+&lt;li&gt;Acquires container information (column etc.) from a container.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TQL statement execution
+&lt;ul&gt;
+&lt;li&gt;Executes multiple SQL statements and acquires the results.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Row deletion
+&lt;ul&gt;
+&lt;li&gt;Deletes a row from a container.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Container creation
+&lt;ul&gt;
+&lt;li&gt;Creates a new container for a database.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Container deletion
+&lt;ul&gt;
+&lt;li&gt;Deletes a container from a database.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SQL SELECT execution
+&lt;ul&gt;
+&lt;li&gt;Executes a SQL SELECT statement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SQL UPDATE execution
+&lt;ul&gt;
+&lt;li&gt;Executes a SQL UPDATE statement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;using-web-api&#34;&gt;Using Web API&lt;/h2&gt;
+&lt;p&gt;To use Web API, Java must be installed beforehand. The compatible versions are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Oracle Java 8&lt;/li&gt;
+&lt;li&gt;Oracle Java 11&lt;/li&gt;
+&lt;li&gt;RedHat OpenJDK 8&lt;/li&gt;
+&lt;li&gt;RedHat OpenJDK 11&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The procedure to install and configure the Web API is as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Installation of a library package&lt;/li&gt;
+&lt;li&gt;Installation of the Web API package&lt;/li&gt;
+&lt;li&gt;Setting of the destination cluster&lt;/li&gt;
+&lt;li&gt;Setting of the Web API operation (optional)&lt;/li&gt;
+&lt;li&gt;Setting of the log output destination (optional)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;installation-of-a-library-package&#34;&gt;Installation of a library package.&lt;/h3&gt;
+&lt;p&gt;Install the following package:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java library package (griddb-ee-java-lib-XX.X-linux.x86_64.rpm)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Log into a machine installed with the Web API as a root user, and install the package using the command below.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-example&#34; data-lang=&#34;example&#34;&gt;# rpm -Uvh griddb-ee-java-lib-X.X.X-linux.x86_64.rpm
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;*X.X.X indicates the GridDB version.&lt;/p&gt;
+&lt;h3 id=&#34;installation-of-the-web-api-package&#34;&gt;Installation of the Web API package.&lt;/h3&gt;
+&lt;p&gt;Install the Web API package (griddb-ee-webapi-XX.X-linux.x86_64.rpm).&lt;/p&gt;
+&lt;p&gt;Log into a machine installed with the Web API as a root user, and install the package using the command below.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-example&#34; data-lang=&#34;example&#34;&gt;# rpm -Uvh griddb-ee-webapi-X.X.X-linux.x86_64.rpm
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;*X.X.X indicates the GridDB version.&lt;/p&gt;
+&lt;p&gt;After installation, the .jar file and the setup directory for Web API are installed as follows:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-example&#34; data-lang=&#34;example&#34;&gt;/usr/griddb-ee-webapi-X.X.X/                             : Web API installation directory
+                     conf/
+                     etc/
+                     griddb-webapi-ee-X.X.X.jar          : Web API jar file
+
+/usr/girddb-webapi/griddb-webapi.jar -&amp;gt; /usr/griddb-ee-webapi-X.X.X/griddb-webapi-ee-X.X.X.jar
+
+/var/lib/gridstore/webapi/conf/griddb_webapi.properties  : Configuration file
+                              /repository.json           : Cluster information definition file
+                         /log                            : Log output directory
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;setting-of-the-destination-cluster&#34;&gt;Setting of the destination cluster&lt;/h3&gt;
+&lt;p&gt;Specify the information of the cluster to be connected from the Web API in the cluster information definition file (&lt;code&gt;/var/lib/gridstore/webapi/conf/repository.json&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Based on the value of the cluster definition file (gs_cluster.json) of the cluster to be connected, specify the cluster configuration method to &amp;ldquo;mode&amp;rdquo;, and the address information corresponding to the method.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parameter&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;clusters&lt;/td&gt;
+&lt;td&gt;array&lt;/td&gt;
+&lt;td&gt;An array of cluster information&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;name&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;Cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mode&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;Connection method (MULTICAST／FIXED_LIST／PROVIDER )&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;(mode=MULTICAST)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;address&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;Multicast address for row registration and acquisition&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;port&lt;/td&gt;
+&lt;td&gt;integer&lt;/td&gt;
+&lt;td&gt;Multicast port for row registration and acquisition&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;jdbcAddress&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;Multicast address for SQL execution&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;jdbcPort&lt;/td&gt;
+&lt;td&gt;integer&lt;/td&gt;
+&lt;td&gt;Multicast port for SQL execution&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;(mode=FIXED_LIST)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;transactionMember&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;address and port for row registration and acquisition&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sqlMember&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;address and port for SQL execution&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;(mode=PROVIDER)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;providerUrl&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;Provider URL for all functions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example for the multicast method&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+  &amp;#34;clusters&amp;#34; : [
+    {
+      &amp;#34;name&amp;#34; : &amp;#34;myCluster&amp;#34;,
+      &amp;#34;mode&amp;#34; : &amp;#34;MULTICAST&amp;#34;,
+      &amp;#34;address&amp;#34; : &amp;#34;239.0.0.111&amp;#34;,
+      &amp;#34;port&amp;#34; : 31999
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the contents of repository.json are invalid (e.g., format error, mandatory parameter not defined, etc.), a Web API startup will result in an error.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;setting-of-web-api-behavior-optional&#34;&gt;Setting of Web API behavior (optional)&lt;/h3&gt;
+&lt;p&gt;Set Web API behavior in the configuration file (&lt;code&gt;/var/lib/gridstore/webapi/conf/griddb_webapi.properties&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Even without changing the initial settings, Web API can work while all the parameters remain at the default values. Change the values as required by the system.&lt;/p&gt;
+&lt;h4 id=&#34;griddb-configuration&#34;&gt;GridDB configuration&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Default value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;failoverTimeout&lt;/td&gt;
+&lt;td&gt;The failover time (in seconds) during which the Web API retries after detecting a node failure in accessing GridDB.&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;transactionTimeout&lt;/td&gt;
+&lt;td&gt;The maximum amount of time between the start and end of a transaction (in seconds).&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;containerCacheSize&lt;/td&gt;
+&lt;td&gt;The maximum number of the container information to be cached.&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;web-api-configuration&#34;&gt;Web API configuration&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Default value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;port&lt;/td&gt;
+&lt;td&gt;Web API service port (integer from 1 to 65535)&lt;/td&gt;
+&lt;td&gt;8081&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;maxResponseSize&lt;/td&gt;
+&lt;td&gt;The upper limit of the size for row acquisition, SQL execution, and TQL execution (MB) (integer from 1 to 2048)&lt;/td&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;maxRequestSize&lt;/td&gt;
+&lt;td&gt;The upper size limit for row registration (MB) (1-2048)&lt;/td&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;loginTimeout&lt;/td&gt;
+&lt;td&gt;The connection timeout time (in seconds) for SQL execution&lt;br&gt;(Specify an integer value for this field. If the value is less than or equal to zero, an SQL statement cannot be executed.)&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;maxQueryNum&lt;/td&gt;
+&lt;td&gt;Maximum number of queries that can be included in one request (integer from 0 to 100)&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;maxLimit&lt;/td&gt;
+&lt;td&gt;Maximum number of rows that can be acquired at a time when executing SQL or TQL (integer of 1 or more)&lt;/td&gt;
+&lt;td&gt;10000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;timeZone&lt;/td&gt;
+&lt;td&gt;Specify the time (in ±hh:mm or ±hhmm), time zone ID (only &amp;ldquo;Z&amp;rdquo; is supported), or AUTO (to take over the JavaVM environment) as a time zone to be used in the offset calculation to retrieve time information in SQL and TQL.&lt;/td&gt;
+&lt;td&gt;Z&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;authenticationMethod&lt;/td&gt;
+&lt;td&gt;Specify either INTERNAL (internal authentication) or LDAP (LDAP authentication) as an authentication method to be used.&lt;/td&gt;
+&lt;td&gt;dependent on the GridDB cluster settings&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;notificationInterfaceAddress&lt;/td&gt;
+&lt;td&gt;To configure the cluster network in multicast mode when multiple network interfaces are available, specify the IP address of the interface to receive the multicast packets from.&lt;/td&gt;
+&lt;td&gt;OS-dependent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sslMode&lt;/td&gt;
+&lt;td&gt;For SSL connection settings, specify DISABLED (SSL is invalid), PREFERRED (SSL is valid, and non-SSL connections are also allowed.), or VERIFY (SSL is valid, and server certificate verification is performed.).&lt;/td&gt;
+&lt;td&gt;PREFERRED&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;blobPath&lt;/td&gt;
+&lt;td&gt;Directory used to store temporary data in processing BLOB data as a zip file&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The Web API needs to be restarted to reflect the environment settings.&lt;/li&gt;
+&lt;li&gt;For details on LDAP authentication and SSL connection, see the &lt;a href=&#34;../3.md_reference_feature/md_reference_feature.md&#34;&gt;GridDB Features Reference&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;If the SSL connection settings are invalid on the GridDB cluster, SSL communications cannot be enabled regardless of the settings of this tool.&lt;/li&gt;
+&lt;li&gt;To specify VERIFY for the settings for SSL communications (sslMode), a certificate by the Certificate Authority (CA) is required; import the certificate using the keytool command. To set a truststore (-Djavax.net.ssl.trustStore) and a password (-Djavax.net.ssl.trustStorePassword) as arguments upon launching java, specify them for the environment variable &lt;code&gt;GS_COMMON_JVM_ARGS&lt;/code&gt;. Note that the Web API does not support the checking of the expiration date of a CA certificate to ensure it is valid.&lt;/li&gt;
+&lt;li&gt;Set the environment variable &lt;code&gt;GS_COMMON_JVM_ARGS&lt;/code&gt; in /etc/environment, referring to the example below. Restart the Web API to apply the settings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-example&#34; data-lang=&#34;example&#34;&gt;GS_COMMON_JVM_ARGS=&amp;#34;-Djavax.net.ssl.trustStore=/var/lib/gridstore/admin/keystore.jks -Djavax.net.ssl.trustStorePassword=changeit&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;To enable SSL communications between the client and the Web API ., set up /usr/griddb-webui/application.properties by referring to the following:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-example&#34; data-lang=&#34;example&#34;&gt;server.ssl.enabled=true
+server.port=8443
+server.ssl.key-store-type=JKS
+server.ssl.key-store=/var/lib/gridstore/admin/keystore.jks
+server.ssl.key-store-password=changeit
+server.ssl.key-alias=tomcat
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;setting-of-the-log-output-destination-optional&#34;&gt;Setting of the log output destination (optional)&lt;/h3&gt;
+&lt;p&gt;The Web API logs are output to the following directory by default.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-example&#34; data-lang=&#34;example&#34;&gt;/var/lib/gridstore/webapi/log
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To change the output directory, edit the following file:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-example&#34; data-lang=&#34;example&#34;&gt;/var/lib/gridstore/webapi/conf/logback.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;starting-and-stopping&#34;&gt;Starting and stopping&lt;/h3&gt;
+&lt;p&gt;Web API applications can be started and stopped using the service command.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-example&#34; data-lang=&#34;example&#34;&gt;# service griddb-webapi [start|stop|status|restart]
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;common-functions-http-requestresponse&#34;&gt;Common functions (HTTP request/response)&lt;/h2&gt;
+&lt;p&gt;This chapter describes the HTTP request/response part common to each function.&lt;/p&gt;
+&lt;h3 id=&#34;uri&#34;&gt;URI&lt;/h3&gt;
+&lt;p&gt;The URI to be accessed when using the Web API.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;http://(Web API server IP) :(port)/griddb/v2/(command path)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For &amp;ldquo;(command path)&amp;rdquo; above, see the section on each function.&lt;/li&gt;
+&lt;li&gt;Operations on clusters, databases and containers whose name contains any special characters (&amp;rsquo;-&amp;rsquo;, &amp;lsquo;.&amp;rsquo;, &amp;lsquo;/&amp;rsquo;, &amp;lsquo;=&amp;rsquo;) cannot be performed in the Web API.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a id=&#34;request_header&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;request-header&#34;&gt;Request header&lt;/h3&gt;
+&lt;p&gt;Specify the following headers to the request header (common to all APIs):&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Field&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Content-Type&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;application/json; charset=UTF-8&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Authorization&lt;/td&gt;
+&lt;td&gt;Specify the user and password to access GridDB in the user: password format (Basic authentication)&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;request-body&#34;&gt;Request body&lt;/h3&gt;
+&lt;p&gt;Specify the request body in JSON format. Please refer to the JSON format of each functions.&lt;/p&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Write JSON format data in UTF-8.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Write the date in UTC using the following format:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;YYYY-MM-DDThh:mm:ss.SSSZ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Otherwise, an error will occur.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Example:
+&lt;ul&gt;
+&lt;li&gt;2016/01/17T14: 32: 33.888Z &amp;hellip; Error due to a year, month and date separator error&lt;/li&gt;
+&lt;li&gt;2016-01-18 &amp;hellip; Error because time is not specified&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The maximum size of JSON data in the request body can be set in &lt;code&gt; griddb_webapi.properties&lt;/code&gt; as below (unit: MB):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;maxRequestSize=20
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;response-code&#34;&gt;Response code&lt;/h3&gt;
+&lt;p&gt;Refer to the section on each function for the response code.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;response_body&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;response-body&#34;&gt;Response body&lt;/h3&gt;
+&lt;p&gt;Refer to the section on each function for the response body when the processing succeeds.&lt;/p&gt;
+&lt;p&gt;If the processing fails, an error message is returned in the following format:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+  &amp;#34;version&amp;#34;:&amp;#34;v2&amp;#34;,
+  &amp;#34;errorCode&amp;#34;:&amp;#34;Error code&amp;#34;,
+  &amp;#34;errorMessage&amp;#34;:&amp;#34;Error message&amp;#34;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The maximum size of JSON data in the response body can be set in &lt;code&gt; griddb_webapi.properties&lt;/code&gt; as below (unit: MB):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;maxResponseSize=20
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;row-acquisition&#34;&gt;Row acquisition&lt;/h2&gt;
+&lt;h3 id=&#34;row-acquisition-from-a-single-container&#34;&gt;Row acquisition from a single container&lt;/h3&gt;
+&lt;p&gt;This function acquires rows from a container (table). It is also possible to narrow down the rows to be acquired by specifying conditions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/:cluster/dbs/:database/containers/:container/rows&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;:cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:database&lt;/td&gt;
+&lt;td&gt;database name (Specify &amp;ldquo;public&amp;rdquo; for a public database)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:container&lt;/td&gt;
+&lt;td&gt;container (table) name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;HTTP method&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;POST&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request header&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;#request_header&#34;&gt;request header&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request body&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/offset&lt;/td&gt;
+&lt;td&gt;Acquisition start position&lt;/td&gt;
+&lt;td&gt;an integer from 0&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/limit&lt;/td&gt;
+&lt;td&gt;The number of rows to be acquired&lt;/td&gt;
+&lt;td&gt;an integer from 1&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/condition&lt;/td&gt;
+&lt;td&gt;Conditional expression (For details, see the &amp;ldquo;&lt;a href=&#34;../11.md_reference_tql/md_reference_tql.md&#34;&gt;GridDB TQL Reference&lt;/a&gt;&amp;rdquo;.)&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/sort&lt;/td&gt;
+&lt;td&gt;Sorting condition (ascending or descending order of values of a specified column; specified as &amp;ldquo;column name asc&amp;rdquo; or &amp;ldquo;column name desc&amp;rdquo; )&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the value specified by limit is greater than the value of maxLimit in the configuration file, the value of maxLimit is used in the limit clause.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The example below acquires row data with a column &amp;ldquo;id&amp;rdquo; value of 50 or more, sorts it in descending order by the value of &amp;ldquo;id&amp;rdquo;, and acquires 100 values from the 11th row.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+  &amp;#34;offset&amp;#34; : 10,
+  &amp;#34;limit&amp;#34;  : 100,
+  &amp;#34;condition&amp;#34; : &amp;#34;id &amp;gt;= 50&amp;#34;,
+  &amp;#34;sort&amp;#34; : &amp;#34;id desc&amp;#34;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Response code&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;Success&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Incorrect request data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;An authentication error, a connection error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;td&gt;The specified resource is not found&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;An error occurs in Web API or GridDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Response body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Acquired rows will be returned as the following JSON data:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns&lt;/td&gt;
+&lt;td&gt;An array of column information&lt;/td&gt;
+&lt;td&gt;array&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/name&lt;/td&gt;
+&lt;td&gt;Column name&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/type&lt;/td&gt;
+&lt;td&gt;JSON Data type&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/rows&lt;/td&gt;
+&lt;td&gt;An array of rows&lt;/td&gt;
+&lt;td&gt;array&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/total&lt;/td&gt;
+&lt;td&gt;Number of rows acquired when offset and limit are ignored&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/offset&lt;/td&gt;
+&lt;td&gt;Acquisition start position&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/limit&lt;/td&gt;
+&lt;td&gt;Number of acquisitions applied&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+  &amp;#34;columns&amp;#34; : [
+    {&amp;#34;name&amp;#34;: &amp;#34;date&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;TIMESTAMP&amp;#34; },
+    {&amp;#34;name&amp;#34;: &amp;#34;value&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;DOUBLE&amp;#34; },
+    {&amp;#34;name&amp;#34;: &amp;#34;str&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;STRING&amp;#34; }
+  ],
+  &amp;#34;rows&amp;#34; : [
+    [&amp;#34;2016-01-16T10:25:00.253Z&amp;#34;, 100.5, &amp;#34;normal&amp;#34; ],
+    [&amp;#34;2016-01-16T10:35:00.691Z&amp;#34;, 173.9, &amp;#34;normal&amp;#34; ],
+    [&amp;#34;2016-01-16T10:45:00.032Z&amp;#34;, 173.9, null ]
+  ],
+  &amp;#34;total&amp;#34; : 100000,
+  &amp;#34;offset&amp;#34; : 0,
+  &amp;#34;limit&amp;#34; : 3
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a name=&#34;data-type-json-type&#34;&gt; Depending on the column data type, column values with the following JSON data type will be returned: &lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Classification&lt;/th&gt;
+&lt;th&gt;Data type&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Primitive&lt;/td&gt;
+&lt;td&gt;Boolean type&lt;/td&gt;
+&lt;td&gt;BOOL&lt;/td&gt;
+&lt;td&gt;Boolean (true/false)&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;String type&lt;/td&gt;
+&lt;td&gt;STRING&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;GridDB&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Integer type&lt;/td&gt;
+&lt;td&gt;BYTE/SHORT/INTEGER/LONG&lt;/td&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;td&gt;512&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Floating point type&lt;/td&gt;
+&lt;td&gt;FLOAT/DOUBLE&lt;/td&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;td&gt;593.5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Date and time type&lt;/td&gt;
+&lt;td&gt;TIMESTAMP&lt;/td&gt;
+&lt;td&gt;Text string&lt;br&gt;・UTC&lt;br&gt;・format&lt;br&gt;YYYY-MM-DDThh:mm:ss.SSSZ&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;2016-01-16T10:25:00.253Z&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Spatial-type&lt;/td&gt;
+&lt;td&gt;GEOMETRY&lt;/td&gt;
+&lt;td&gt;Text string (WKT representation)&lt;/td&gt;
+&lt;td&gt;POLYGON((0 0,10 0,10 10,0 10,0 0))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;BLOB type&lt;/td&gt;
+&lt;td&gt;BLOB&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;UEsDBAoAAAgAADS4PFIAAAAAAAAAAAA&amp;hellip;&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;td&gt;Boolean type&lt;/td&gt;
+&lt;td&gt;BOOL&lt;/td&gt;
+&lt;td&gt;Array of Boolean values&lt;/td&gt;
+&lt;td&gt;[true, false, true]\&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;String type&lt;/td&gt;
+&lt;td&gt;STRING&lt;/td&gt;
+&lt;td&gt;Array of text string values&lt;/td&gt;
+&lt;td&gt;[&amp;ldquo;A&amp;rdquo;,&amp;ldquo;B&amp;rdquo;,&amp;ldquo;C&amp;rdquo;]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Integer type&lt;/td&gt;
+&lt;td&gt;BYTE/SHORT/INTEGER/LONG&lt;/td&gt;
+&lt;td&gt;Array of numbers&lt;/td&gt;
+&lt;td&gt;[100, 39, 535]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Floating point type&lt;/td&gt;
+&lt;td&gt;FLOAT/DOUBLE&lt;/td&gt;
+&lt;td&gt;Array of numbers&lt;/td&gt;
+&lt;td&gt;[3.52, 6.94, 1.83]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Date and time type&lt;/td&gt;
+&lt;td&gt;TIMESTAMP&lt;/td&gt;
+&lt;td&gt;Array of text string values&lt;br&gt;(The format is the same as the format for the primitive date and time type)&lt;/td&gt;
+&lt;td&gt;[&amp;ldquo;2016-01-16T10:25:00.253Z&amp;rdquo;, &amp;ldquo;2016-01-17T01:42:53.038Z&amp;rdquo;]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BLOB data is returned in base64 format; thus, base64 data needs to be decoded after obtaining BLOB data.&lt;/li&gt;
+&lt;li&gt;If the column value is NULL, null is returned for the column in JSON data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;row-acquisition-from-a-single-container-blob-data-as-a-zip-file&#34;&gt;Row acquisition from a single container (BLOB data as a zip file)&lt;/h3&gt;
+&lt;p&gt;This function acquires rows from a container (table). If the container has a BLOB column, BLOB data is returned as a zip file. It is also possible to narrow down the rows to be acquired by specifying conditions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/:cluster/dbs/:database/containers/:container/rows/blob&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;:cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:database&lt;/td&gt;
+&lt;td&gt;database name (Specify &amp;ldquo;public&amp;rdquo; for a public database)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:container&lt;/td&gt;
+&lt;td&gt;container (table) name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;HTTP method&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;POST&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request header&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;#request_header&#34;&gt;request header&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request body&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/offset&lt;/td&gt;
+&lt;td&gt;Acquisition start position&lt;/td&gt;
+&lt;td&gt;an integer from 0&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/limit&lt;/td&gt;
+&lt;td&gt;The number of rows to be acquired&lt;/td&gt;
+&lt;td&gt;an integer from 1&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/condition&lt;/td&gt;
+&lt;td&gt;Conditional expression (For details, see the &amp;ldquo;&lt;a href=&#34;../11.md_reference_tql/md_reference_tql.md&#34;&gt;GridDB TQL Reference&lt;/a&gt;&amp;rdquo;.)&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/sort&lt;/td&gt;
+&lt;td&gt;Sorting condition (ascending or descending order of values of a specified column; specified as &amp;ldquo;column name asc&amp;rdquo; or &amp;ldquo;column name desc&amp;rdquo; )&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/fileNameCol&lt;/td&gt;
+&lt;td&gt;The name of a column in the container whose value is used to name BLOB data files&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the value specified by limit is greater than the value of maxLimit in the configuration file, the value of maxLimit is used in the limit clause.&lt;/li&gt;
+&lt;li&gt;By default, BLOB data for each row is saved to a file with a random name without a file extension. The Web API has an option to set the name of a BLOB data file by a value of another column. For example, if a table has the string column &lt;code&gt;file_name&lt;/code&gt; that stores file names of BLOB data, by option, the values of this column can be used to set the name of BLOB data file of each row: &lt;code&gt;{&amp;quot;fileNameCol&amp;quot;: &amp;quot;&amp;lt;column_name&amp;gt;&amp;quot;}&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following example acquires row data with the column &amp;ldquo;id&amp;rdquo; value of 50 or more, sorts it in descending order by the value of &amp;ldquo;id&amp;rdquo;, acquires 100 values from the 10th row, and uses the value in the column &lt;code&gt;file_name&lt;/code&gt; to name BLOB data files.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+  &amp;#34;offset&amp;#34; : 10,
+  &amp;#34;limit&amp;#34; : 100,
+  &amp;#34;condition&amp;#34; : &amp;#34;id &amp;gt;= 50&amp;#34;,
+  &amp;#34;sort&amp;#34; : &amp;#34;id desc&amp;#34;,
+  &amp;#34;fileNameCol&amp;#34;: &amp;#34;file_name&amp;#34;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Response code&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;Success&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Incorrect request data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;An authentication error, a connection error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;td&gt;The specified resource is not found&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;An error occurs in Web API or GridDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Response body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The response body is returned as the following form data:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Key&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Content type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;file&lt;/td&gt;
+&lt;td&gt;The zip file contains all BLOB data files.&lt;br/&gt;A random name generated as a name of the zip file is attached to a response.&lt;/td&gt;
+&lt;td&gt;application/zip&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rows&lt;/td&gt;
+&lt;td&gt;Data of a non-BLOB column&lt;/td&gt;
+&lt;td&gt;application/json&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The value of &lt;code&gt;rows&lt;/code&gt; is returned as the following JSON data:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns&lt;/td&gt;
+&lt;td&gt;An array of column information&lt;/td&gt;
+&lt;td&gt;array&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/name&lt;/td&gt;
+&lt;td&gt;Column name&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/type&lt;/td&gt;
+&lt;td&gt;Column data type&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/rows&lt;/td&gt;
+&lt;td&gt;An array of rows&lt;/td&gt;
+&lt;td&gt;array&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/total&lt;/td&gt;
+&lt;td&gt;Number of rows acquired when offset and limit are ignored&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/offset&lt;/td&gt;
+&lt;td&gt;Acquisition start position&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/limit&lt;/td&gt;
+&lt;td&gt;Number of acquisitions applied&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IF the container does not have a BLOB column, or the query result has no BLOB data, this API returns a zip file with no file inside.&lt;/li&gt;
+&lt;li&gt;If the container has two or more BLOB columns, the BLOB data files have the same name with a prefix number attached. e.g. 1_picture.jpg and 2_picture.jpg.&lt;/li&gt;
+&lt;li&gt;If the row value of &lt;code&gt;fileNameCol&lt;/code&gt; has an invalid file name, the API server generates a random name.&lt;/li&gt;
+&lt;li&gt;The value of a BLOB column in the JSON data is the same with the BLOB file name in a zip file, and both start with the prefix &lt;code&gt;(BLOB)&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The response data has two data types: JSON data and form data. They are separated by a string that starts with the &lt;code&gt;--&lt;/code&gt; prefix. The JSON data is in the first part, and the form data is in the second part. To retrieve the zip file that contains all BLOB data files, copy the binary content (start with the &lt;code&gt;PK&lt;/code&gt; prefix) and save it to a file with a &lt;code&gt;.zip&lt;/code&gt; extension.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Below is an example of a response body:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;--zO7yOzRXhcrXUbD7heAB9rGzewWDfUt
+Content-Disposition: form-data; name=&amp;#34;rows&amp;#34;
+Content-Type: application/json;charset=UTF-8
+
+{&amp;#34;columns&amp;#34;:[{&amp;#34;name&amp;#34;:&amp;#34;key&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;INTEGER&amp;#34;},{&amp;#34;name&amp;#34;:&amp;#34;data&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;BLOB&amp;#34;},{&amp;#34;name&amp;#34;:&amp;#34;des&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;STRING&amp;#34;}],&amp;#34;rows&amp;#34;:[[1000,&amp;#34;(BLOB)d0f925b9-884a-420a-a7a8-91c53ed7b126&amp;#34;,&amp;#34;lombok&amp;#34;],[200,&amp;#34;(BLOB)dee59ebc-2bf9-4f36-9b86-0bf72ff16e29&amp;#34;,&amp;#34;anh2.png&amp;#34;]],&amp;#34;offset&amp;#34;:0,&amp;#34;limit&amp;#34;:2,&amp;#34;total&amp;#34;:3}
+--zO7yOzRXhcrXUbD7heAB9rGzewWDfUt
+Content-Disposition: form-data; name=&amp;#34;file&amp;#34;; filename=&amp;#34;e17bba76-4315-4c32-9384-81fff84abc84.zip&amp;#34;
+Content-Type: application/zip
+Content-Length: 1780817
+
+PKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Depending on the column data type, column values with the following JSON data type will be returned:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Classification&lt;/th&gt;
+&lt;th&gt;Data type&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Primitive&lt;/td&gt;
+&lt;td&gt;Boolean type&lt;/td&gt;
+&lt;td&gt;BOOL&lt;/td&gt;
+&lt;td&gt;Boolean (true/false)&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;String type&lt;/td&gt;
+&lt;td&gt;STRING&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;GridDB&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Integer type&lt;/td&gt;
+&lt;td&gt;BYTE/SHORT/INTEGER/LONG&lt;/td&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;td&gt;512&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Floating point type&lt;/td&gt;
+&lt;td&gt;FLOAT/DOUBLE&lt;/td&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;td&gt;593.5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Date and time type&lt;/td&gt;
+&lt;td&gt;TIMESTAMP&lt;/td&gt;
+&lt;td&gt;Text string&lt;br&gt;・UTC&lt;br&gt;・format&lt;br&gt;YYYY-MM-DDThh:mm:ss.SSSZ&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;2016-01-16T10:25:00.253Z&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Spatial-type&lt;/td&gt;
+&lt;td&gt;GEOMETRY&lt;/td&gt;
+&lt;td&gt;Text string (WKT representation)&lt;/td&gt;
+&lt;td&gt;POLYGON((0 0,10 0,10 10,0 10,0 0))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;td&gt;Boolean type&lt;/td&gt;
+&lt;td&gt;BOOL&lt;/td&gt;
+&lt;td&gt;Array of Boolean values&lt;/td&gt;
+&lt;td&gt;[true, false, true]\&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;String type&lt;/td&gt;
+&lt;td&gt;STRING&lt;/td&gt;
+&lt;td&gt;Array of text string values&lt;/td&gt;
+&lt;td&gt;[&amp;ldquo;A&amp;rdquo;,&amp;ldquo;B&amp;rdquo;,&amp;ldquo;C&amp;rdquo;]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Integer type&lt;/td&gt;
+&lt;td&gt;BYTE/SHORT/INTEGER/LONG&lt;/td&gt;
+&lt;td&gt;Array of numbers&lt;/td&gt;
+&lt;td&gt;[100, 39, 535]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Floating point type&lt;/td&gt;
+&lt;td&gt;FLOAT/DOUBLE&lt;/td&gt;
+&lt;td&gt;Array of numbers&lt;/td&gt;
+&lt;td&gt;[3.52, 6.94, 1.83]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Date and time type&lt;/td&gt;
+&lt;td&gt;TIMESTAMP&lt;/td&gt;
+&lt;td&gt;Array of text string values&lt;br&gt;(The format is the same as the format for the primitive date and time type)&lt;/td&gt;
+&lt;td&gt;[&amp;ldquo;2016-01-16T10:25:00.253Z&amp;rdquo;, &amp;ldquo;2016-01-17T01:42:53.038Z&amp;rdquo;]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the column value is NULL, null is returned for the column in JSON data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;row-acquisition-from-multiple-containers&#34;&gt;Row acquisition from multiple containers&lt;/h3&gt;
+&lt;p&gt;This function acquires rows from multiple containers (tables). It is also possible to narrow down the rows to be acquired by specifying conditions. This function is only supported for a container with a row key.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/:cluster/dbs/:database/containers/rows&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;:cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:database&lt;/td&gt;
+&lt;td&gt;database name (Specify &amp;ldquo;public&amp;rdquo; for a public database)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;HTTP method&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;POST&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request header&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;#request_header&#34;&gt;request header&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request body&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Default value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/name&lt;/td&gt;
+&lt;td&gt;Container name&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/startKeyValue&lt;/td&gt;
+&lt;td&gt;- Row key value to specify the start position to obtain row data.&lt;br /&gt;- This applies only for a container that has a single row key with the data type LONG, INTEGER, or TIMESTAMP.&lt;br /&gt;- When the row key is TIMESTAMP, the start key value must be in the following format: &lt;code&gt;yyyy-MM-ddTHH:mm:ss.SSSZ&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;string or number&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/finishKeyValue&lt;/td&gt;
+&lt;td&gt;- Row key value to specify the last position to obtain row data.&lt;br /&gt;- This applies only for a container that has a single row key with the data type LONG, INTEGER, or TIMESTAMP.&lt;br /&gt;- When the row key is TIMESTAMP, the finish key value must be in the following format: &lt;code&gt;yyyy-MM-ddTHH:mm:ss.SSSZ&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;string or number&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/keyValues&lt;/td&gt;
+&lt;td&gt;- List of row key values used as search conditions to obtain row data. The row data with a row key that matches with a value in this list will be returned.&lt;br /&gt;- This applies only for a container that has a single row key with the data type STRING, LONG, INTEGER or TIMESTAMP.&lt;br /&gt;- If &lt;code&gt;startKeyValue&lt;/code&gt;, &lt;code&gt;finishKeyValue&lt;/code&gt;, and &lt;code&gt;keyValues&lt;/code&gt; are specified at the same time, API obtains rows using the &lt;code&gt;keyValues&lt;/code&gt; condition and ignores &lt;code&gt;startKeyValue&lt;/code&gt; and &lt;code&gt;finishKeyValue&lt;/code&gt;.&lt;br /&gt;- When the row key is TIMESTAMP, the key value must be in the following format: &lt;code&gt;yyyy-MM-ddTHH:mm:ss.SSSZ&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;array of strings/numbers&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/offset&lt;/td&gt;
+&lt;td&gt;Acquisition start position. The offset is set for each container.&lt;/td&gt;
+&lt;td&gt;an integer from 0&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/limit&lt;/td&gt;
+&lt;td&gt;The number of rows to be acquired. The limit is set for each container.&lt;/td&gt;
+&lt;td&gt;an integer from 1&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;10000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the value specified by limit is greater than the value of maxLimit in the configuration file, the value of maxLimit is used in the limit clause.&lt;/li&gt;
+&lt;li&gt;BLOB data is returned in base64 format; thus, base64 data needs to be decoded after obtaining BLOB data.&lt;/li&gt;
+&lt;li&gt;The conditions &lt;code&gt;startKeyValue&lt;/code&gt;, &lt;code&gt;finishKeyValue&lt;/code&gt;, and &lt;code&gt;keyValues&lt;/code&gt; are only supported for a container with a single row key.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following example acquires row data from two containers. The first container acquires row data with a key value from 0 to 100, from which 10 values from the 2nd row are acquired. The second container only acquires row data with a key value 1, 3, or 5.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[
+  {
+    &amp;#34;name&amp;#34;:&amp;#34;container1&amp;#34;,
+    &amp;#34;startKeyValue&amp;#34;:0,
+    &amp;#34;finishKeyValue&amp;#34;:100,
+    &amp;#34;limit&amp;#34;:10,
+    &amp;#34;offset&amp;#34;:2
+  },
+  {
+    &amp;#34;name&amp;#34;:&amp;#34;container2&amp;#34;,
+    &amp;#34;keyValues&amp;#34;:[1, 3, 5]
+  }
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Response code&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;Success&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Incorrect request data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;An authentication error, a connection error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;td&gt;The specified resource is not found&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;An error occurs in Web API or GridDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Response body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Acquired rows will be returned as the following JSON data:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/container&lt;/td&gt;
+&lt;td&gt;Container name&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns&lt;/td&gt;
+&lt;td&gt;An array of column information&lt;/td&gt;
+&lt;td&gt;array&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/name&lt;/td&gt;
+&lt;td&gt;Column name&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/type&lt;/td&gt;
+&lt;td&gt;JSON data type&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/results&lt;/td&gt;
+&lt;td&gt;An array of rows&lt;/td&gt;
+&lt;td&gt;array&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/total&lt;/td&gt;
+&lt;td&gt;Number of rows acquired when offset and limit are ignored&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/offset&lt;/td&gt;
+&lt;td&gt;Acquisition start position&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/limit&lt;/td&gt;
+&lt;td&gt;Number of acquisitions applied&lt;/td&gt;
+&lt;td&gt;number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[
+  {
+    &amp;#34;container&amp;#34;:&amp;#34;container1&amp;#34;,
+    &amp;#34;columns&amp;#34;: [
+      { &amp;#34;name&amp;#34;:&amp;#34;date&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;TIMESTAMP&amp;#34; },
+      { &amp;#34;name&amp;#34;:&amp;#34;value&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;DOUBLE&amp;#34; },
+      { &amp;#34;name&amp;#34;:&amp;#34;str&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;STRING&amp;#34; }
+    ],
+    &amp;#34;results&amp;#34;: [
+      [&amp;#34;2016-01-16T10:25:00.253Z&amp;#34;, 100.5, &amp;#34;normal&amp;#34;],
+      [&amp;#34;2016-01-16T10:35:00.691Z&amp;#34;, 173.9, &amp;#34;normal&amp;#34;],
+      [&amp;#34;2016-01-16T10:45:00.032Z&amp;#34;, 173.9, null]
+    ],
+    &amp;#34;total&amp;#34;:100,
+    &amp;#34;offset&amp;#34;:0,
+    &amp;#34;limit&amp;#34;:3
+  },
+  {
+    &amp;#34;container&amp;#34;:&amp;#34;container2&amp;#34;,
+    &amp;#34;columns&amp;#34;: [
+      { &amp;#34;name&amp;#34;:&amp;#34;date&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;STRING&amp;#34; },
+      { &amp;#34;name&amp;#34;:&amp;#34;value&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;LONG&amp;#34; }
+    ],
+    &amp;#34;results&amp;#34;: [
+      [&amp;#34;string1&amp;#34;, 100],
+      [&amp;#34;string2&amp;#34;, 173],
+      [&amp;#34;string3&amp;#34;, 200]
+    ],
+    &amp;#34;total&amp;#34;:10000,
+    &amp;#34;offset&amp;#34;:0,
+    &amp;#34;limit&amp;#34;:10000
+  }
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Depending on the column data type, column values with the following JSON data type will be returned:
+Refer to &lt;a href=&#34;#data-type-json-type&#34;&gt;this section&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the column value is NULL, null is returned for the column in JSON data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;row-registration&#34;&gt;Row registration&lt;/h2&gt;
+&lt;h3 id=&#34;row-registration-in-a-single-container&#34;&gt;Row registration in a single container&lt;/h3&gt;
+&lt;p&gt;This function registers rows in a container.&lt;/p&gt;
+&lt;p&gt;Specify the rows to be registered in JSON format. Multiple rows can be registered in one container.&lt;/p&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The data of one row / multiple rows can be specified and registered in one container.&lt;/li&gt;
+&lt;li&gt;The container to be registered must exist.&lt;/li&gt;
+&lt;li&gt;If the container has a row key that already exists in the container, that row will be updated. If the container has a row key that does not exist in the container, a row will be newly created.&lt;/li&gt;
+&lt;li&gt;If the container has no row key, all rows will be newly created.&lt;/li&gt;
+&lt;li&gt;The Web API supports BLOB data in base64 format. Thus, base64 BLOB data needs to be encoded before specifying it to the request body.&lt;/li&gt;
+&lt;li&gt;When an exception occurs during row registration, only some rows may be registered. Therefore, when retrying a request with an HTTP client during an exception, the same row data may be registered duplicately if a container has no row key.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/:cluster/dbs/:database/containers/:container/rows&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;:cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:database&lt;/td&gt;
+&lt;td&gt;database name (Specify &amp;ldquo;public&amp;rdquo; for a public database)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:container&lt;/td&gt;
+&lt;td&gt;container (table) name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;HTTP method&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;PUT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request header&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;#request_header&#34;&gt;request header&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Specify the rows as the following JSON format:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/(row)&lt;/td&gt;
+&lt;td&gt;Row (an array of column values)&lt;/td&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[
+  [&amp;#34;2016-01-16T10:25:00.253Z&amp;#34;, 100.5, &amp;#34;normal&amp;#34;],
+  [&amp;#34;2016-01-16T10:35:00.691Z&amp;#34;, 173.9, &amp;#34;normal&amp;#34;],
+  [&amp;#34;2016-01-16T10:45:00.032Z&amp;#34;, 173.9, null]
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a name=&#34;data-type-json-type-registration&#34;&gt; Depending on the column data type, describe a column value with the following JSON data type:&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Classification&lt;/th&gt;
+&lt;th&gt;Data type&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Primitive&lt;/td&gt;
+&lt;td&gt;Boolean type&lt;/td&gt;
+&lt;td&gt;BOOL&lt;/td&gt;
+&lt;td&gt;Boolean value (true or false)&lt;br&gt;or character string (&amp;ldquo;true&amp;rdquo; or &amp;ldquo;false&amp;rdquo;)&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;String type&lt;/td&gt;
+&lt;td&gt;STRING&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;GridDB&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Integer type&lt;/td&gt;
+&lt;td&gt;BYTE/SHORT/INTEGER/LONG&lt;/td&gt;
+&lt;td&gt;Number or text string&lt;/td&gt;
+&lt;td&gt;512&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Floating point type&lt;/td&gt;
+&lt;td&gt;FLOAT/DOUBLE&lt;/td&gt;
+&lt;td&gt;Number or text string&lt;/td&gt;
+&lt;td&gt;593.5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Date and time type&lt;/td&gt;
+&lt;td&gt;TIMESTAMP&lt;/td&gt;
+&lt;td&gt;Text string&lt;br&gt;・UTC&lt;br&gt;・format&lt;br&gt;YYYY-MM-DDThh:mm:ss.SSSZ&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;2016-01-16T10:25:00.253Z&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Spatial-type&lt;/td&gt;
+&lt;td&gt;GEOMETRY&lt;/td&gt;
+&lt;td&gt;Text string (WKT representation)&lt;/td&gt;
+&lt;td&gt;POLYGON((0 0,10 0,10 10,0 10,0 0))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;BLOB type&lt;/td&gt;
+&lt;td&gt;BLOB&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;UEsDBAoAAAgAADS4PFIAAAAAAAAAAAA&amp;hellip;&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;td&gt;Boolean type&lt;/td&gt;
+&lt;td&gt;BOOL&lt;/td&gt;
+&lt;td&gt;Boolean array or string array&lt;/td&gt;
+&lt;td&gt;[true, false, true]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;String type&lt;/td&gt;
+&lt;td&gt;STRING&lt;/td&gt;
+&lt;td&gt;Array of text string values&lt;/td&gt;
+&lt;td&gt;[&amp;ldquo;A&amp;rdquo;,&amp;ldquo;B&amp;rdquo;,&amp;ldquo;C&amp;rdquo;]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Integer type&lt;/td&gt;
+&lt;td&gt;BYTE/SHORT/INTEGER/LONG&lt;/td&gt;
+&lt;td&gt;Numeric array or string array&lt;/td&gt;
+&lt;td&gt;[100, 39, 535]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Floating point type&lt;/td&gt;
+&lt;td&gt;FLOAT/DOUBLE&lt;/td&gt;
+&lt;td&gt;Numeric array or string array&lt;/td&gt;
+&lt;td&gt;[3.52, 6.94, 1.83]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Date and time type&lt;/td&gt;
+&lt;td&gt;TIMESTAMP&lt;/td&gt;
+&lt;td&gt;Array of text string values&lt;br&gt;(The format is the same as the format for the primitive date and time type)&lt;/td&gt;
+&lt;td&gt;[&amp;ldquo;2016-01-16T10:25:00.253Z&amp;rdquo;, &amp;ldquo;2016-01-17T01:42:53.038Z&amp;rdquo;]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If a NULL value (JSON data type null) is specified as a column value, the Web API operates as follows:
+&lt;ul&gt;
+&lt;li&gt;If the NOT NULL constraint is specified for the column, a registration error occurs.&lt;/li&gt;
+&lt;li&gt;Otherwise, a NULL value is registered.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Response code&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;Success&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Incorrect request data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;An authentication error, a connection error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;td&gt;The specified resource is not found&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;An error occurs in Web API or GridDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Response body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The response body will be returned as the following JSON data:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/count&lt;/td&gt;
+&lt;td&gt;Number of updated/inserted rows&lt;/td&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+  &amp;#34;count&amp;#34; : 2
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;row-registration-in-a-single-container-blob-data-as-a-zip-file&#34;&gt;Row registration in a single container (BLOB data as a zip file)&lt;/h3&gt;
+&lt;p&gt;This function registers the rows in a container with specified BLOB data as a zip file.&lt;/p&gt;
+&lt;p&gt;Specify the rows to be registered in form data. Multiple rows can be registered in one container.&lt;/p&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The data of one row or multiple rows can be specified and registered in one container.&lt;/li&gt;
+&lt;li&gt;The container to be registered must exist.&lt;/li&gt;
+&lt;li&gt;If the container has a row key that already exists in the container, that row will be updated. If the container has a row key that does not exist in the container, a row will be newly created.&lt;/li&gt;
+&lt;li&gt;If the container has no row key, a row will be newly created.&lt;/li&gt;
+&lt;li&gt;When an exception occurs during row registration, only some rows may be registered. Therefore, when an HTTP client retries a request during an exception, the same row data may be registered duplicately if the container has no row key.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/:cluster/dbs/:database/containers/:container/rows/blob&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;:cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:database&lt;/td&gt;
+&lt;td&gt;database name (Specify &amp;ldquo;public&amp;rdquo; for a public database)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:container&lt;/td&gt;
+&lt;td&gt;container (table) name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;HTTP method&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;PUT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request header&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;#request_header&#34;&gt;request header&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Specify the request body as the following form data:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Key&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Content type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;file&lt;/td&gt;
+&lt;td&gt;The zip file contains all BLOB data files.&lt;/td&gt;
+&lt;td&gt;application/zip&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rows&lt;/td&gt;
+&lt;td&gt;A list of rows, each of which is a list of objects, that needs to be added to the container in JSON format&lt;/td&gt;
+&lt;td&gt;application/json&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Specify the &lt;code&gt;rows&lt;/code&gt; as the following JSON data:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/(row)&lt;/td&gt;
+&lt;td&gt;Row (an array of column values)&lt;/td&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The value of BLOB columns must be of string type. This is the same with a file name (case-sensitive) that is in the zip file.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If the value of BLOB columns is not found in the zip file, an error is returned.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If the zip file has a sub directory, specify the sub directory in a BLOB column value.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The maximum size of an upload file can be set in the application.properties file as below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# specifies the maximum size permitted for uploaded files. The default is 1MB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;spring.servlet.multipart.max-file-size=500MB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# specifies the maximum size allowed for multipart/form-data requests. The default is 10MB.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;spring.servlet.multipart.max-request-size=500MB
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;If the zip file has a structure as below:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;file.zip
+    |----image1.png
+    |----picture
+            |----image2.png
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then the JSON data of &lt;code&gt;rows&lt;/code&gt; in the request body should be:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[
+   [&amp;#34;5&amp;#34;,&amp;#34;image1.png&amp;#34;],   
+   [&amp;#34;6&amp;#34;,&amp;#34;picture/image2.png&amp;#34;]
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Depending on the column data type, describe a column value with the following JSON data type:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Classification&lt;/th&gt;
+&lt;th&gt;Data type&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Primitive&lt;/td&gt;
+&lt;td&gt;Boolean type&lt;/td&gt;
+&lt;td&gt;BOOL&lt;/td&gt;
+&lt;td&gt;Boolean value (true or false)&lt;br&gt;or character string (&amp;ldquo;true&amp;rdquo; or &amp;ldquo;false&amp;rdquo;)&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;String type&lt;/td&gt;
+&lt;td&gt;STRING&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;GridDB&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Integer type&lt;/td&gt;
+&lt;td&gt;BYTE/SHORT/INTEGER/LONG&lt;/td&gt;
+&lt;td&gt;Number or text string&lt;/td&gt;
+&lt;td&gt;512&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Floating point type&lt;/td&gt;
+&lt;td&gt;FLOAT/DOUBLE&lt;/td&gt;
+&lt;td&gt;Number or text string&lt;/td&gt;
+&lt;td&gt;593.5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Date and time type&lt;/td&gt;
+&lt;td&gt;TIMESTAMP&lt;/td&gt;
+&lt;td&gt;Text string&lt;br&gt;・UTC&lt;br&gt;・format&lt;br&gt;YYYY-MM-DDThh:mm:ss.SSSZ&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;2016-01-16T10:25:00.253Z&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Spatial-type&lt;/td&gt;
+&lt;td&gt;GEOMETRY&lt;/td&gt;
+&lt;td&gt;Text string (WKT representation)&lt;/td&gt;
+&lt;td&gt;POLYGON((0 0,10 0,10 10,0 10,0 0))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;td&gt;Boolean type&lt;/td&gt;
+&lt;td&gt;BOOL&lt;/td&gt;
+&lt;td&gt;Boolean array or string array&lt;/td&gt;
+&lt;td&gt;[true, false, true]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;String type&lt;/td&gt;
+&lt;td&gt;STRING&lt;/td&gt;
+&lt;td&gt;Array of text string values&lt;/td&gt;
+&lt;td&gt;[&amp;ldquo;A&amp;rdquo;,&amp;ldquo;B&amp;rdquo;,&amp;ldquo;C&amp;rdquo;]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Integer type&lt;/td&gt;
+&lt;td&gt;BYTE/SHORT/INTEGER/LONG&lt;/td&gt;
+&lt;td&gt;Numeric array or string array&lt;/td&gt;
+&lt;td&gt;[100, 39, 535]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Floating point type&lt;/td&gt;
+&lt;td&gt;FLOAT/DOUBLE&lt;/td&gt;
+&lt;td&gt;Numeric array or string array&lt;/td&gt;
+&lt;td&gt;[3.52, 6.94, 1.83]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Date and time type&lt;/td&gt;
+&lt;td&gt;TIMESTAMP&lt;/td&gt;
+&lt;td&gt;Array of text string values&lt;br&gt;(The format is the same as the format for the primitive date and time type)&lt;/td&gt;
+&lt;td&gt;[&amp;ldquo;2016-01-16T10:25:00.253Z&amp;rdquo;, &amp;ldquo;2016-01-17T01:42:53.038Z&amp;rdquo;]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If a NULL value (JSON data type null) is specified as a column value, the Web API operates as follows:
+&lt;ul&gt;
+&lt;li&gt;If the NOT NULL constraint is specified for the column, a registration error will occur.&lt;/li&gt;
+&lt;li&gt;Otherwise, a NULL value will be registered.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Response code&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;Success&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Incorrect request data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;An authentication error, a connection error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;td&gt;The specified resource is not found&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;An error occurs in Web API or GridDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Response body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If the process is successful, nothing is returned.&lt;/p&gt;
+&lt;p&gt;Please refer to &lt;a href=&#34;#response_body&#34;&gt;response body&lt;/a&gt; in case of failure.&lt;/p&gt;
+&lt;h3 id=&#34;row-registration-in-multiple-containers&#34;&gt;Row registration in multiple containers&lt;/h3&gt;
+&lt;p&gt;This function registers rows in multiple containers.&lt;/p&gt;
+&lt;p&gt;Specify the rows to be registered in JSON format. Multiple rows can be registered in one container.&lt;/p&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The data of one row / multiple rows can be specified and registered in one container.&lt;/li&gt;
+&lt;li&gt;The containers to be registered must exist.&lt;/li&gt;
+&lt;li&gt;If the container has a row key that already exists in the container, that row will be updated. If the container has a row key that does not exist in the container, a row will be newly created.&lt;/li&gt;
+&lt;li&gt;If the container has no row key, all rows will be newly created.&lt;/li&gt;
+&lt;li&gt;The number of values in a row must be equal to the number of columns in a container. If the column is nullable, the value of that column cannot be omitted and must be specified as a &lt;code&gt;null&lt;/code&gt; or empty value.&lt;/li&gt;
+&lt;li&gt;The Web API supports BLOB data in base64 format. Thus, base64 BLOB data needs to be encoded before specifying it to the request body.&lt;/li&gt;
+&lt;li&gt;When an exception occurs during row registration, only some rows may be registered. Therefore, when retrying a request with an HTTP client during an exception, the same row data may be registered duplicately if the container has no row key.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/:cluster/dbs/:database/containers/rows&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;:cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:database&lt;/td&gt;
+&lt;td&gt;database name (Specify &amp;ldquo;public&amp;rdquo; for a public database)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;HTTP method&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;PUT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request header&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;#request_header&#34;&gt;request header&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Specify the rows as the following JSON format:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/containerName&lt;/td&gt;
+&lt;td&gt;Container name&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/rows&lt;/td&gt;
+&lt;td&gt;Rows (an array of column values)&lt;/td&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the row key is TIMESTAMP, the row value must be in the following format: &lt;code&gt;yyyy-MM-ddTHH:mm:ss.SSSZ&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[
+  {
+    &amp;#34;containerName&amp;#34;:&amp;#34;container2&amp;#34;,
+    &amp;#34;rows&amp;#34;:[
+      [&amp;#34;a3&amp;#34;, &amp;#34;a4&amp;#34;],
+      [&amp;#34;b3&amp;#34;, &amp;#34;b4&amp;#34;]
+    ]
+  },
+  {
+    &amp;#34;containerName&amp;#34;:&amp;#34;container4&amp;#34;,
+    &amp;#34;rows&amp;#34;:[
+      [3000, 4000],
+      [5000, 6000]
+    ]
+  }
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Depending on the column data type, describe a column value with the following JSON data type:&lt;/p&gt;
+&lt;p&gt;Refer to &lt;a href=&#34;#data-type-json-type-registration&#34;&gt;this section&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If a NULL value (JSON data type null) is specified as a column value, the Web API operates as follows:
+&lt;ul&gt;
+&lt;li&gt;If the NOT NULL constraint is specified for the column, a registration error occurs.&lt;/li&gt;
+&lt;li&gt;Otherwise, a NULL value is registered.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Response code&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;Success&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Incorrect request data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;An authentication error, a connection error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;td&gt;The specified resource is not found&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;An error occurs in Web API or GridDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Response body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The response body is returned as the following JSON data:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/containerName&lt;/td&gt;
+&lt;td&gt;Container name&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/updatedRows&lt;/td&gt;
+&lt;td&gt;Number of updated/inserted rows&lt;/td&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[
+  {
+    &amp;#34;containerName&amp;#34;:&amp;#34;container2&amp;#34;,
+    &amp;#34;updatedRows&amp;#34; : 2
+  },
+  {
+    &amp;#34;containerName&amp;#34;:&amp;#34;container4&amp;#34;,
+    &amp;#34;updatedRows&amp;#34; : 2
+  }
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;database-connection-confirmation&#34;&gt;Database connection confirmation&lt;/h2&gt;
+&lt;p&gt;Check the connection to the specified database.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/:cluster/dbs/:database/checkConnection&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;:cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:database&lt;/td&gt;
+&lt;td&gt;database name (Specify &amp;ldquo;public&amp;rdquo; for a public database)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;HTTP method&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;GET&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request header&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;#request_header&#34;&gt;request header&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request parameter&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Data type&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/timeout&lt;/td&gt;
+&lt;td&gt;Timeout value used only for this API (in seconds)&lt;/td&gt;
+&lt;td&gt;an integer from 0&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Response code&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;Success&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Incorrect request data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;An authentication error, a connection error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;An error occurs in Web API or GridDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Response body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If the process is successful, nothing is returned.&lt;/p&gt;
+&lt;p&gt;Please refer to &lt;a href=&#34;#response_body&#34;&gt;response body&lt;/a&gt; in case of failure.&lt;/p&gt;
+&lt;h2 id=&#34;container-list-acquisition&#34;&gt;Container list acquisition&lt;/h2&gt;
+&lt;p&gt;Get a list of containers and tables. It is also possible to narrow down the containers to be acquired by specifying conditions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/:cluster/dbs/:database/containers&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;:cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:database&lt;/td&gt;
+&lt;td&gt;database name (Specify &amp;ldquo;public&amp;rdquo; for a public database)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;HTTP method&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;GET&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request header&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;#request_header&#34;&gt;request header&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request parameter&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/type&lt;/td&gt;
+&lt;td&gt;Type of containers to be acquired&lt;/td&gt;
+&lt;td&gt;text string（COLLECTION or TIME_SERIES）&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/limit&lt;/td&gt;
+&lt;td&gt;The number of rows to be acquired&lt;/td&gt;
+&lt;td&gt;an integer from 0&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/offset&lt;/td&gt;
+&lt;td&gt;Acquisition start position&lt;/td&gt;
+&lt;td&gt;an integer from 0&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/sort&lt;/td&gt;
+&lt;td&gt;Sorting expression&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;offset can be used together with &amp;ldquo;limit&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Response code&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;Success&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Incorrect request data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;An authentication error, a connection error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;An error occurs in Web API or GridDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Response body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Acquired rows will be returned as the following JSON data:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/names&lt;/td&gt;
+&lt;td&gt;Array of container names&lt;/td&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/total&lt;/td&gt;
+&lt;td&gt;Number of acquisitions when offset and limit are ignored&lt;/td&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/offset&lt;/td&gt;
+&lt;td&gt;Acquisition start position&lt;/td&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/limit&lt;/td&gt;
+&lt;td&gt;Number of acquisitions applied&lt;/td&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+  &amp;#34;names&amp;#34; : [
+    &amp;#34;container1&amp;#34;,
+    &amp;#34;container2&amp;#34;,
+    &amp;#34;timeseries1&amp;#34;
+  ],
+  &amp;#34;total&amp;#34; : 100000,
+  &amp;#34;offset&amp;#34; : 0,
+  &amp;#34;limit&amp;#34; : 3
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;container-information-acquisition&#34;&gt;Container information acquisition&lt;/h2&gt;
+&lt;p&gt;Get the information on a container or a table.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/:cluster/dbs/:database/containers/:container/info&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;:cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:database&lt;/td&gt;
+&lt;td&gt;database name (Specify &amp;ldquo;public&amp;rdquo; for a public database)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:container&lt;/td&gt;
+&lt;td&gt;container (table) name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;HTTP method&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;GET&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request header&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;#request_header&#34;&gt;request header&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;-&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Response code&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;Success&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Incorrect request data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;An authentication error, a connection error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;td&gt;The specified resource is not found&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;An error occurs in Web API or GridDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Response body&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/container_name&lt;/td&gt;
+&lt;td&gt;Container name&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/container_type&lt;/td&gt;
+&lt;td&gt;Container type&lt;/td&gt;
+&lt;td&gt;string (COLLECTION or TIME_SERIES)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/rowkey&lt;/td&gt;
+&lt;td&gt;Existence of a row key&lt;/td&gt;
+&lt;td&gt;Boolean (true or false)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns&lt;/td&gt;
+&lt;td&gt;An array of column information&lt;/td&gt;
+&lt;td&gt;array&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/name&lt;/td&gt;
+&lt;td&gt;Column name&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/type&lt;/td&gt;
+&lt;td&gt;Data type of column&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/index&lt;/td&gt;
+&lt;td&gt;Index&lt;/td&gt;
+&lt;td&gt;Array of strings (TREE or SPATIAL)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+  &amp;#34;container_name&amp;#34; : &amp;#34;container1&amp;#34;,
+  &amp;#34;container_type&amp;#34; : &amp;#34;COLLECTION&amp;#34;,
+  &amp;#34;rowkey&amp;#34; : true,
+  &amp;#34;columns&amp;#34; : [
+    {&amp;#34;name&amp;#34;: &amp;#34;date&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;TIMESTAMP&amp;#34;, &amp;#34;index&amp;#34;: [&amp;#34;TREE&amp;#34;]},
+    {&amp;#34;name&amp;#34;: &amp;#34;value&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;DOUBLE&amp;#34;, &amp;#34;index&amp;#34;: []},
+    {&amp;#34;name&amp;#34;: &amp;#34;str&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;STRING&amp;#34;, &amp;#34;index&amp;#34;: []}
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Containers with composite row keys and composite indexes are not supported. When the command is executed, IllegalStateException occurs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tql-command-execution&#34;&gt;TQL command execution&lt;/h2&gt;
+&lt;p&gt;Execute a TQL statement. Multiple TQL statements can be sent at once.
+The value of specific columns can be set to acquire it in the execution result.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/:cluster/dbs/:database/tql&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;:cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:database&lt;/td&gt;
+&lt;td&gt;database name (Specify &amp;ldquo;public&amp;rdquo; for a public database)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;HTTP method&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;POST&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request header&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;#request_header&#34;&gt;request header&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request body&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/name&lt;/td&gt;
+&lt;td&gt;Target container name&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/stmt&lt;/td&gt;
+&lt;td&gt;TQL statement&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns&lt;/td&gt;
+&lt;td&gt;Array of acquisition column names&lt;/td&gt;
+&lt;td&gt;array&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the value specified by limit in TQL is greater than the value of maxLimit in the configuration file, the value of maxLimit is used in the limit clause.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[
+  {&amp;#34;name&amp;#34; : &amp;#34;container1&amp;#34;, &amp;#34;stmt&amp;#34; : &amp;#34;select * limit 100&amp;#34;, &amp;#34;columns&amp;#34; : null},
+  {&amp;#34;name&amp;#34; : &amp;#34;container2&amp;#34;, &amp;#34;stmt&amp;#34; : &amp;#34;select * where column1&amp;gt;=0&amp;#34;, &amp;#34;columns&amp;#34; : [&amp;#34;column1&amp;#34;]},
+  {&amp;#34;name&amp;#34; : &amp;#34;container3&amp;#34;, &amp;#34;stmt&amp;#34; : &amp;#34;select SUM(*) order by column1 desc&amp;#34;, &amp;#34;columns&amp;#34; : null}
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Response code&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;Success&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Incorrect request data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;An authentication error, a connection error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;td&gt;The specified resource is not found&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;An error occurs in Web API or GridDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Response body&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns&lt;/td&gt;
+&lt;td&gt;An array of column information&lt;/td&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/name&lt;/td&gt;
+&lt;td&gt;Column name&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/type&lt;/td&gt;
+&lt;td&gt;JSON data type&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/results&lt;/td&gt;
+&lt;td&gt;TQL execution results&lt;/td&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/total&lt;/td&gt;
+&lt;td&gt;Number of acquisitions when offset and limit are ignored&lt;/td&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/offset&lt;/td&gt;
+&lt;td&gt;Acquisition start position&lt;/td&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/limit&lt;/td&gt;
+&lt;td&gt;Number of acquisitions applied&lt;/td&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the TQL statement is an aggregate operation, total, offset, and limit are not included in the response body.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[
+  {
+    &amp;#34;columns&amp;#34; : [
+      {&amp;#34;name&amp;#34;: &amp;#34;date&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;TIMESTAMP&amp;#34;},
+      {&amp;#34;name&amp;#34;: &amp;#34;value&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;DOUBLE&amp;#34;},
+      {&amp;#34;name&amp;#34;: &amp;#34;str&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;STRING&amp;#34;}
+    ],
+    &amp;#34;results&amp;#34; : [
+      [&amp;#34;2016-01-16T10:25:00.253Z&amp;#34;, 100.5, &amp;#34;normal&amp;#34; ],
+      [&amp;#34;2016-01-16T10:35:00.691Z&amp;#34;, 173.9, &amp;#34;normal&amp;#34; ],
+      [&amp;#34;2016-01-16T10:45:00.032Z&amp;#34;, 173.9, null]
+    ],
+    &amp;#34;total&amp;#34; : 1000125,
+    &amp;#34;offset&amp;#34; : 0,
+    &amp;#34;limit&amp;#34; : 3
+  },
+  {
+    &amp;#34;columns&amp;#34; : [
+      {&amp;#34;name&amp;#34;: &amp;#34;aggregationResult&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;LONG&amp;#34;}
+    ],
+    &amp;#34;results&amp;#34; : [
+      [55]
+    ]
+  }
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;row-deletion&#34;&gt;Row deletion&lt;/h2&gt;
+&lt;p&gt;This function deletes the rows from the container (table).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/:cluster/dbs/:database/containers/:container/rows&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;:cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:database&lt;/td&gt;
+&lt;td&gt;database name (Specify &amp;ldquo;public&amp;rdquo; for a public database)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:container&lt;/td&gt;
+&lt;td&gt;container (table) name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;HTTP method&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;DELETE&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request header&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;#request_header&#34;&gt;request header&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request body&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/(key)&lt;/td&gt;
+&lt;td&gt;Row key&lt;/td&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[
+  &amp;#34;key1&amp;#34;,
+  &amp;#34;key2&amp;#34;,
+  &amp;#34;key3&amp;#34;
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Response code&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;204&lt;/td&gt;
+&lt;td&gt;Success&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Incorrect request data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;An authentication error, a connection error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;td&gt;The specified resource is not found&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;An error occurs in Web API or GridDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Response body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If the process is successful, nothing is returned.&lt;/p&gt;
+&lt;p&gt;Please refer to &lt;a href=&#34;#response_body&#34;&gt;response body&lt;/a&gt; in case of failure.&lt;/p&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Containers with composite row keys are not supported. When the command is executed, IllegalStateException occurs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;creating-a-container&#34;&gt;Creating a container&lt;/h2&gt;
+&lt;p&gt;Create a container.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/:cluster/dbs/:database/containers&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;:cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:database&lt;/td&gt;
+&lt;td&gt;database name (Specify &amp;ldquo;public&amp;rdquo; for a public database)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;HTTP method&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;POST&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request header&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;#request_header&#34;&gt;request header&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request body&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/container_name&lt;/td&gt;
+&lt;td&gt;Container name&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/container_type&lt;/td&gt;
+&lt;td&gt;Container type&lt;/td&gt;
+&lt;td&gt;string (COLLECTION or TIME_SERIES)&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/rowkey&lt;/td&gt;
+&lt;td&gt;Existence of a row key&lt;/td&gt;
+&lt;td&gt;Boolean (true or false)&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns&lt;/td&gt;
+&lt;td&gt;An array of column information&lt;/td&gt;
+&lt;td&gt;array&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/name&lt;/td&gt;
+&lt;td&gt;Column name&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/type&lt;/td&gt;
+&lt;td&gt;Data type of column&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/index&lt;/td&gt;
+&lt;td&gt;Index&lt;/td&gt;
+&lt;td&gt;Array of strings (TREE or SPATIAL)&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+  &amp;#34;container_name&amp;#34; : &amp;#34;container1&amp;#34;,
+  &amp;#34;container_type&amp;#34; : &amp;#34;COLLECTION&amp;#34;,
+  &amp;#34;rowkey&amp;#34; : true,
+  &amp;#34;columns&amp;#34; : [
+    {&amp;#34;name&amp;#34;: &amp;#34;date&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;TIMESTAMP&amp;#34;, &amp;#34;index&amp;#34;: [&amp;#34;TREE&amp;#34;]},
+    {&amp;#34;name&amp;#34;: &amp;#34;value&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;DOUBLE&amp;#34;, &amp;#34;index&amp;#34;: []},
+    {&amp;#34;name&amp;#34;: &amp;#34;str&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;STRING&amp;#34;, &amp;#34;index&amp;#34;: []}
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Response code&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;201&lt;/td&gt;
+&lt;td&gt;Success&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Incorrect request data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;An authentication error, a connection error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;409&lt;/td&gt;
+&lt;td&gt;The specified container already exists.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;An error occurs in Web API or GridDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Response body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If the process is successful, nothing is returned.&lt;/p&gt;
+&lt;p&gt;Please refer to &lt;a href=&#34;#response_body&#34;&gt;response body&lt;/a&gt; in case of failure.&lt;/p&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Composite row keys and composite indexes are not supported.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;container-deletion&#34;&gt;Container deletion&lt;/h2&gt;
+&lt;p&gt;Delete a container&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/:cluster/dbs/:database/containers&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;:cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:database&lt;/td&gt;
+&lt;td&gt;database name (Specify &amp;ldquo;public&amp;rdquo; for a public database)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;HTTP method&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;DELETE&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request header&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;#request_header&#34;&gt;request header&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request body&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/(name)&lt;/td&gt;
+&lt;td&gt;&amp;lt;Container name&amp;gt;&lt;/td&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[
+  &amp;#34;container1&amp;#34;,
+  &amp;#34;container2&amp;#34;,
+  &amp;#34;timeseries1&amp;#34;
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Response code&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;204&lt;/td&gt;
+&lt;td&gt;Success, no container to be deleted&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Incorrect request data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;An authentication error, a connection error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;An error occurs in Web API or GridDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Response body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If the process is successful, nothing is returned.&lt;/p&gt;
+&lt;p&gt;Please refer to &lt;a href=&#34;#response_body&#34;&gt;response body&lt;/a&gt; in case of failure.&lt;/p&gt;
+&lt;h2 id=&#34;sql-select-execution&#34;&gt;SQL SELECT execution&lt;/h2&gt;
+&lt;p&gt;This function executes one or more SQL SELECT statements in a GridDB database.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/:cluster/dbs/:database/sql/select&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;:cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:database&lt;/td&gt;
+&lt;td&gt;database name (Specify &amp;ldquo;public&amp;rdquo; for a public database)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;HTTP method&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;POST&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request header&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;#request_header&#34;&gt;request header&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Specify one or more SQL SELECT statements as the following JSON format:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/stmt&lt;/td&gt;
+&lt;td&gt;An SQL SELECT statement&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[
+  {&amp;#34;stmt&amp;#34; : &amp;#34;select * from container1&amp;#34;},
+  {&amp;#34;stmt&amp;#34; : &amp;#34;select column1 from container2 where column1&amp;gt;=0&amp;#34;},
+  {&amp;#34;stmt&amp;#34; : &amp;#34;select column2, column3 from container3 order by column1 desc&amp;#34;}
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Response code&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;Success&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Incorrect request data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;An authentication error, a connection error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;td&gt;The specified resource is not found&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;An error occurs in Web API or GridDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Response body&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns&lt;/td&gt;
+&lt;td&gt;An array of column information&lt;/td&gt;
+&lt;td&gt;array&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/name&lt;/td&gt;
+&lt;td&gt;Column name&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/columns/type&lt;/td&gt;
+&lt;td&gt;JSON data type&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/results&lt;/td&gt;
+&lt;td&gt;SQL SELECT execution results&lt;/td&gt;
+&lt;td&gt;array&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[
+  {
+    &amp;#34;columns&amp;#34; : [
+      {&amp;#34;name&amp;#34;: &amp;#34;date&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;TIMESTAMP&amp;#34;},
+      {&amp;#34;name&amp;#34;: &amp;#34;value&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;DOUBLE&amp;#34;},
+      {&amp;#34;name&amp;#34;: &amp;#34;str&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;STRING&amp;#34;}
+    ],
+    &amp;#34;results&amp;#34; : [
+      [&amp;#34;2016-01-16T10:25:00.253Z&amp;#34;, 100.5, &amp;#34;normal&amp;#34; ],
+      [&amp;#34;2016-01-16T10:35:00.691Z&amp;#34;, 173.9, &amp;#34;normal&amp;#34; ],
+      [&amp;#34;2016-01-16T10:45:00.032Z&amp;#34;, 173.9, null]
+    ]
+  },
+  {
+    &amp;#34;columns&amp;#34; : [
+      {&amp;#34;name&amp;#34;: &amp;#34;date&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;TIMESTAMP&amp;#34;},
+      {&amp;#34;name&amp;#34;: &amp;#34;value&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;DOUBLE&amp;#34;},
+      {&amp;#34;name&amp;#34;: &amp;#34;str&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;STRING&amp;#34;}
+    ],
+    &amp;#34;results&amp;#34; : [
+      [&amp;#34;2016-01-16T10:25:00.253Z&amp;#34;, 100.5, &amp;#34;normal&amp;#34; ],
+      [&amp;#34;2016-01-16T10:35:00.691Z&amp;#34;, 173.9, &amp;#34;normal&amp;#34; ],
+      [&amp;#34;2016-01-16T10:45:00.032Z&amp;#34;, 173.9, null]
+    ]
+  }
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Depending on the column data type, column values with the following JSON data type will be returned:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Classification&lt;/th&gt;
+&lt;th&gt;Data type&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Primitive&lt;/td&gt;
+&lt;td&gt;Boolean type&lt;/td&gt;
+&lt;td&gt;BOOL&lt;/td&gt;
+&lt;td&gt;Boolean (true/false)&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;String type&lt;/td&gt;
+&lt;td&gt;STRING&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;GridDB&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Integer type&lt;/td&gt;
+&lt;td&gt;BYTE/SHORT/INTEGER/LONG&lt;/td&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;td&gt;512&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Floating point type&lt;/td&gt;
+&lt;td&gt;FLOAT/DOUBLE&lt;/td&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;td&gt;593.5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Date and time type&lt;/td&gt;
+&lt;td&gt;TIMESTAMP&lt;/td&gt;
+&lt;td&gt;Text string&lt;br&gt;・UTC&lt;br&gt;・format&lt;br&gt;YYYY-MM-DDThh:mm:ss.SSSZ&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;2016-01-16T10:25:00.253Z&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the column value is NULL, null is returned for the column in JSON data.&lt;/li&gt;
+&lt;li&gt;GEOMETRY and array types are not supported in this function.&lt;/li&gt;
+&lt;li&gt;For GEOMETRY and array columns, &amp;ldquo;UNKNOWN&amp;rdquo; will be returned as a data type, and null will be returned as a data value.&lt;/li&gt;
+&lt;li&gt;When multiple SQL statements are specified and any one of them fails to execute, status code 400 is returned as an http response. In this case, SQL statements subsequent to the failed one are not executed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sql-update-execution&#34;&gt;SQL UPDATE execution&lt;/h2&gt;
+&lt;p&gt;This function executes one or more SQL UPDATE statements in a GridDB database.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Path&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/:cluster/dbs/:database/sql/update&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;:cluster&lt;/td&gt;
+&lt;td&gt;cluster name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:database&lt;/td&gt;
+&lt;td&gt;database name (Specify &amp;ldquo;public&amp;rdquo; for a public database)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;HTTP method&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;POST&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request header&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;#request_header&#34;&gt;request header&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Request body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Specify one or more SQL UPDATE statements as the following JSON format:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/stmt&lt;/td&gt;
+&lt;td&gt;An SQL UPDATE statement&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;✓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[Memo]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SELECT, EXPLAIN, and ANALYZE in an SQL statement are not supported in this API.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[
+  {&amp;#34;stmt&amp;#34; : &amp;#34;update container1 set col2 = 333 where col1 = &amp;#39;t3&amp;#39;&amp;#34;},
+  {&amp;#34;stmt&amp;#34; : &amp;#34;insert into container1(col1, col2) values(&amp;#39;t4&amp;#39;, 4)&amp;#34;}
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Response code&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;Success&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;Incorrect request data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;An authentication error, a connection error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;An error occurs in Web API or GridDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Response body&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;JSON data type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/status&lt;/td&gt;
+&lt;td&gt;Status of an SQL UPDATE statement. &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;0&lt;/code&gt; denote success and failure, respectively. Even if a result contains &lt;code&gt;0&lt;/code&gt;, the HTTP response status code is 200.&lt;/td&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/message&lt;/td&gt;
+&lt;td&gt;Error message displayed when executing the query&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/updatedRows&lt;/td&gt;
+&lt;td&gt;Number of updated or inserted rows&lt;/td&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/stmt&lt;/td&gt;
+&lt;td&gt;SQL UPDATE statement&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[
+  {
+    &amp;#34;status&amp;#34; : 1,
+    &amp;#34;updatedRows&amp;#34; : 2,
+    &amp;#34;stmt&amp;#34; : &amp;#34;update container1 set col2 = 333 where col1 = &amp;#39;t3&amp;#39;&amp;#34;,
+    &amp;#34;message&amp;#34;: null
+  },
+  {
+    &amp;#34;status&amp;#34; : 0,
+    &amp;#34;updatedRows&amp;#34; : 0,
+    &amp;#34;stmt&amp;#34; : &amp;#34;insert into container1(col1, col2) values(&amp;#39;t4&amp;#39;, 4)&amp;#34; ,
+    &amp;#34;message&amp;#34;: &amp;#34;[240001:SQL_COMPILE_SYNTAX_ERROR] Specified insert column=&amp;#39;col1&amp;#39; is not found on updating (sql=\&amp;#34;insert into container1(col1, col2) values(&amp;#39;t4&amp;#39;, 4)\&amp;#34;) (db=&amp;#39;public&amp;#39;) (user=&amp;#39;admin&amp;#39;) (clientId=&amp;#39;1dafa133-df4-43cb-85b3-3b17593d298c:2&amp;#39;) (clientNd=&amp;#39;{clientId=1450, address=10.116.41.133:58632}&amp;#39;) (address=10.116.227.26:20001, partitionId=557)&amp;#34;
+  }
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;checking-the-operation&#34;&gt;Checking the operation&lt;/h2&gt;
+&lt;p&gt;To check the operation of the Web API, use the curl command in Linux or some other command.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Example) Checking database connection&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-example&#34; data-lang=&#34;example&#34;&gt;curl -f -X GET -u &amp;#34;user:password&amp;#34; \
+http://host:port/griddb/v2/cluster/dbs/public/checkConnection
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Example) Retrieving a container list&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-example&#34; data-lang=&#34;example&#34;&gt;curl -f -X GET -u &amp;#34;user:password&amp;#34; \
+http://host:port/griddb/v2/cluster/dbs/public/containers?limit=100
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Example) Row acquisition&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl -f -X POST -u &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user:password&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;-H &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Content-type:application/json; charset=UTF-8&amp;#34;&lt;/span&gt; -d &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;{&amp;#34;limit&amp;#34;:5,&amp;#34;sort&amp;#34;:&amp;#34;id asc&amp;#34;}&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;http://host:port/griddb/v2/cluster/dbs/public/containers/test/rows
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Example) Row registration&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl -f -X PUT -u &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user:password&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;-H &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Content-type:application/json; charset=UTF-8&amp;#34;&lt;/span&gt; -d &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;[[1,&amp;#34;value&amp;#34;],[2,&amp;#34;value&amp;#34;]]&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;http://host:port/griddb/v2/cluster/dbs/public/containers/test/rows
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Example) SQL SELECT execution&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl -f -X POST -u &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user:password&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;-H &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Content-type:application/json; charset=UTF-8&amp;#34;&lt;/span&gt; -d &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;[{&amp;#34;stmt&amp;#34;:&amp;#34;select * from test&amp;#34;}]&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;http://host:port/griddb/v2/cluster/dbs/public/sql/select
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;uninstallation&#34;&gt;Uninstallation&lt;/h2&gt;
+&lt;p&gt;Delete the directory and the distributed files in the following procedures after stopping the Web API.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# rpm -e griddb-ee-webapi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Python API Reference</title>
+      <link>https://gahoh.github.io/docsy-example/docs/30_reference_api/19.md_reference_python_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gahoh.github.io/docsy-example/docs/30_reference_api/19.md_reference_python_api/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;./md_reference_python_api.html&#34;&gt;Python API Reference&lt;/a&gt;
+~&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Node.js API Reference</title>
+      <link>https://gahoh.github.io/docsy-example/docs/30_reference_api/20.md_reference_nodejs_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gahoh.github.io/docsy-example/docs/30_reference_api/20.md_reference_nodejs_api/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;./md_reference_nodejs_api.html&#34;&gt;Node.js API Reference&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Go API Reference</title>
+      <link>https://gahoh.github.io/docsy-example/docs/30_reference_api/21.md_reference_go_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gahoh.github.io/docsy-example/docs/30_reference_api/21.md_reference_go_api/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;./md_reference_go_api.html&#34;&gt;Go API Reference&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

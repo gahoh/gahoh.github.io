@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GridDB – C APIリファレンス</title>
+    <link>https://gahoh.github.io/docsy-example/ja/docs/30_reference_api/13.md_reference_c_api/</link>
+    <description>Recent content in C APIリファレンス on GridDB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://gahoh.github.io/docsy-example/ja/docs/30_reference_api/13.md_reference_c_api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>
