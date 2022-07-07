@@ -1,0 +1,16 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GridDB – GridDB</title>
+    <link>https://gahoh.github.io/ja/</link>
+    <description>Recent content on GridDB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://gahoh.github.io/ja/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+      
+    
+    
+  </channel>
+</rss>

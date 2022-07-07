@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GridDB – Node.js API Reference</title>
+    <link>https://gahoh.github.io/ja/docs/30_reference_api/20.md_reference_nodejs_api/</link>
+    <description>Recent content in Node.js API Reference on GridDB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://gahoh.github.io/ja/docs/30_reference_api/20.md_reference_nodejs_api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

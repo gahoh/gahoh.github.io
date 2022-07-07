@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GridDB – Python API Reference</title>
+    <link>https://gahoh.github.io/ja/docs/30_reference_api/19.md_reference_python_api/</link>
+    <description>Recent content in Python API Reference on GridDB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://gahoh.github.io/ja/docs/30_reference_api/19.md_reference_python_api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>
